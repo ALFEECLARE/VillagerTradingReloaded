@@ -1,0 +1,22 @@
+1.20.x Changelog
+48.0
+====
+ - 48.0.1 Send known channels to the server when they send us theirs.
+ - 48.0.0 1.20.2 Release
+
+47.999
+======
+ - 47.999.12 Enable ForgeLootTableProvider.
+ - 47.999.11 Global Loot Modifiers
+ - 47.999.10 Move old tests.
+ - 47.999.9  1.20.2-rc2
+ - 47.999.8  1.20.2-rc1
+ - 47.999.7  1.20.2-pre4
+ - 47.999.6  1.20.2-pre3
+ - 47.999.5  Use official mappings for in-repo patches, will be converted to SRG during build.
+ - 47.999.4  1.20.2-pre2
+ - 47.999.3  Fix debug overlay text not rendering.
+ - 47.999.2  Make SimpleChannel use a varInt for the discriminator allowing essentially unlimited packets.
+ - 47.999.1  Rewrite networking.
+ - 47.999.0  1.20.2-pre1
+
