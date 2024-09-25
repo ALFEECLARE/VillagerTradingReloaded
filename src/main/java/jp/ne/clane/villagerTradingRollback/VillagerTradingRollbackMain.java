@@ -7,13 +7,12 @@ import org.apache.logging.log4j.Logger;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.ai.gossip.GossipType;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 
-@Mod(VillagerTradingRollbackMain.MOD_ID)
+@net.neoforged.fml.common.Mod(VillagerTradingRollbackMain.MOD_ID)
 public class VillagerTradingRollbackMain {
 	public static final String MOD_ID = "villagertradingrollback";
 	public static final String MOD_NAME = "VillagerTradingRollback";
@@ -42,12 +41,9 @@ public class VillagerTradingRollbackMain {
 		return this;
 	}
 
-	public VillagerTradingRollbackMain() {
+	public VillagerTradingRollbackMain(IEventBus modEventBus, ModContainer modContainer) {
 		instance = this;
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		bus.addListener(this::setup);
-
-		MinecraftForge.EVENT_BUS.register(this);
+		modEventBus.addListener(this::setup);
 	}
 
 	/**
